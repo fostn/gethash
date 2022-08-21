@@ -19,7 +19,6 @@ url = f"http://hashmeapi-stage.us-west-2.elasticbeanstalk.com/search?q={keyword}
 r = requests.get(url)
 hashtags = r.json()
 if len(hashtags) > 1:
-	print(len(hashtags))
 	print("-"*40)
 	for i in range(len(hashtags)):
 		if hashtags[i] == "HashmeApp":
