@@ -1,10 +1,8 @@
-import os 
+import os
 try:
-	
 	import requests
 except ModuleNotFoundError:
 	os.system("pip install requests")
-
 print("""
  +-+-+-+-+-+-+-+
  |g|e|t|h|a|s|h|
@@ -12,7 +10,11 @@ print("""
 #hashtags generator
     iG : f09l
 """)
-keyword = input("enter keyword to create hashtags : ")
+print("-"*40)
+print("enter keyword to create hashtags\nfor example : code ")
+print("-"*40)
+keyword = input("enter keyword : ")
+
 url = f"http://hashmeapi-stage.us-west-2.elasticbeanstalk.com/search?q={keyword}"
 r = requests.get(url)
 hashtags = r.json()
