@@ -29,7 +29,8 @@ if len(hashtags) > 1:
 	if save == "y":
 		for i in range(len(hashtags)):
 			hash = hashtags[i]
-			with open("ATAGS.txt","a") as f:
+			with open("gethash.txt","a") as f:
 				f.write(f"#{hash}"+"\n")
+		print("file saved as gethash.txt")
 else:
 	print("try another keyword #f09l")
